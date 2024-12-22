@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Xise
+Comment=Port of Clearlooks-Phenix and Traditional OK
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Xise
+MetacityTheme=Xise
+IconTheme=GNOME-Wise
+CursorTheme=mate
+CursorSize=24
+ButtonLayout=:minimize,maximize,close

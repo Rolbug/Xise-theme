@@ -1,0 +1,14 @@
+$variant: "light";
+
+@import "colors";
+$accent_color: red;
+@import "drawing";
+@import "common";
+
+@import "applications";
+@import "lightdm";
+// @import 'ubiquity';
+@import "colors-public";
+@import "libhandy";
+@import "headerbar";
+@import "mate-panel";

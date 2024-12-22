@@ -1,0 +1,52 @@
+$variant: "dark";
+
+@import "colors";
+@import "drawing";
+
+#PanelPlug,
+.mate-panel-menu-bar,
+PanelToplevel.background {
+    background-color: $dark_base_color;
+
+    background-image: linear-gradient(
+        to bottom,
+        lighten($menubar_bg_color, 5%),
+        darken($menubar_bg_color, 5%)
+    );
+    /* normal panel */
+    color: $dark_text_color;
+    /* transparent panel, light desktop background*/
+    /* color: @fg_color; */
+    text-shadow: none;
+}
+
+.mate-panel-menu-bar #PanelApplet button,
+.mate-panel-menu-bar #PanelApplet button.flat,
+.mate-panel-menu-bar #PanelApplet button.toggle,
+.mate-panel-menu-bar #PanelApplet button.flat.toggle {
+    @include button(undecorated);
+    border: 1px solid transparent;
+    outline: 0;
+    color: $dark_text_color;
+    padding: 0;
+    &:active,
+    &:checked {
+        border: 1px solid $borders_color;
+        @include button(normal, $dark_bg_color);
+        background: linear-gradient(
+            to top,
+            lighten($dark_bg_color, 10%),
+            darken($dark_bg_color, 2%)
+        );
+        padding: 0;
+    }
+}
+
+window.background, /* selector where outlines are writen on GtkTrayIcon */
+.mate-panel-menu-bar menubar,
+.mate-panel-menu-bar button,
+.mate-panel-menu-bar PanelApplet {
+    outline-style: dotted;
+    outline-offset: -2px;
+    outline-color: shade(red, 0.7);
+}
